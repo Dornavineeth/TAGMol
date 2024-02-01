@@ -8,8 +8,8 @@ The code has been tested in the following environment:
 
 ### Install via Conda and Pip
 ```bash
-conda create -n targetdiff python=3.8.17
-conda activate targetdiff
+conda create -n tagmol python=3.8.17
+conda activate tagmol
 conda install pytorch=1.13.1 pytorch-cuda=11.6 -c pytorch -c nvidia
 conda install pyg=2.2.0 -c pyg
 conda install rdkit=2022.03.2 openbabel=3.1.1 tensorboard=2.13.0 pyyaml=6.0 easydict=1.9 python-lmdb=1.4.1 -c conda-forge

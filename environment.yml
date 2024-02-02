@@ -1,4 +1,4 @@
-name: moldiff_test
+name: tagmol
 channels:
   - pytorch
   - pyg

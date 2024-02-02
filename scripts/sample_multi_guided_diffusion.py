@@ -17,7 +17,7 @@ from datasets.pl_data import FOLLOW_BATCH
 from models.molopt_score_model import ScorePosNet3D, log_sample_categorical
 from utils.evaluation import atom_num
 
-from scripts.property_prediction.inference import get_model as get_guide_model
+from utils.misc_prop import get_model as get_guide_model
 from utils.transforms_prop import FeaturizeProteinAtom as GuideFeaturizeProteinAtom
 from utils.transforms_prop import FollowerFeaturizeLigandAtom as GuideFeaturizeLigandAtom
 from datasets.protein_ligand import KMAP

@@ -1,16 +1,16 @@
 TOTAL_TASKS=100
 BATCH_SIZE=100
 
-if [ $# != 5 ]; then
-    echo "Error: 5 arguments required."
+if [ $# != 2 ]; then
+    echo "Error: 2 arguments required."
     exit 1
 fi
 
 CONFIG_FILE=$1
-RESULT_PATH=$2
-NODE_ALL=$3
-NODE_THIS=$4
-START_IDX=$5
+RESULT_PATH="experiments/$2"
+NODE_ALL=1
+NODE_THIS=0
+START_IDX=0
 
 for ((i=$START_IDX;i<$TOTAL_TASKS;i++)); do
     NODE_TARGET=$(($i % $NODE_ALL))

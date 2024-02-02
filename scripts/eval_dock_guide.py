@@ -127,7 +127,7 @@ if __name__ == '__main__':
                         ligand_v=batch.ligand_atom_feature_full,
                         batch_ligand=batch.ligand_element_batch,
                         time_step=time_step,
-                        dock=batch[config.train.get("target", "vina_dock")]        # TODO: show warning if target not in config
+                        dock=batch[config.train.get("target", "vina_dock")],        # TODO: show warning if target not in config
                         return_pred=True
                     )
 

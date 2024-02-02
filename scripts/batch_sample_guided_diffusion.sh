@@ -7,12 +7,10 @@ if [ $# != 2 ]; then
 fi
 
 CONFIG_FILE=$1
-RESULT_PATH="experiments/$2"
+RESULT_PATH="experiments_single/$2"
 NODE_ALL=1
 NODE_THIS=0
 START_IDX=0
-
-# numbers=(70 44 92 80 49 81 85 22 59 60)
 
 for ((i=$START_IDX;i<$TOTAL_TASKS;i++)); do
 # ## now loop through the above array
@@ -23,5 +21,3 @@ for ((i=$START_IDX;i<$TOTAL_TASKS;i++)); do
         python -m scripts.sample_guided_diffusion ${CONFIG_FILE} -i ${i} --batch_size ${BATCH_SIZE} --result_path ${RESULT_PATH}
     fi
 done
-
-python scripts/evaluate_diffusion.py ${RESULT_PATH} --docking_mode vina_score  --protein_root data/test_set

@@ -3,7 +3,6 @@ from scipy.stats import pearsonr, spearmanr
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from torch_geometric.loader import DataLoader
 
-from models.property_pred.prop_model import PropPredNet, PropPredNetEnc
 from models.molopt_guide_model import DockGuideNet3D
 
 
@@ -52,22 +51,5 @@ def get_model(config, protein_atom_feat_dim, ligand_atom_feat_dim):
             ligand_atom_feature_dim=ligand_atom_feat_dim
         )
         return model
-    if config.model.encoder.name == 'egnn_enc':
-        model = PropPredNetEnc(
-            config.model,
-            protein_atom_feature_dim=protein_atom_feat_dim,
-            ligand_atom_feature_dim=ligand_atom_feat_dim,
-            enc_ligand_dim=config.model.enc_ligand_dim,
-            enc_node_dim=config.model.enc_node_dim,
-            enc_graph_dim=config.model.enc_graph_dim,
-            enc_feature_type=config.model.enc_feature_type,
-            output_dim=1
-        )
     else:
-        model = PropPredNet(
-            config.model,
-            protein_atom_feature_dim=protein_atom_feat_dim,
-            ligand_atom_feature_dim=ligand_atom_feat_dim,
-            output_dim=3
-        )
-    return model
+        raise NotImplementedError

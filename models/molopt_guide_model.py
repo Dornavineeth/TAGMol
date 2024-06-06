@@ -495,7 +495,7 @@ class DockGuideNet3D(nn.Module):
                 fix_x=True
             )
             if self.problem_type not in ("classification", ):
-                if clamp_pred_min is not None and clamp_pred_max is not None:
+                if clamp_pred_min is not None or clamp_pred_max is not None:
                     pred = torch.clamp(pred, min=clamp_pred_min, max=clamp_pred_max)
             else:
                 raise NotImplementedError(f"Not implemented for {self.problem_type} problem type")

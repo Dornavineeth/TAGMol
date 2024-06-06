@@ -1,5 +1,7 @@
 # TAGMol : Target-Aware Gradient-guided  Molecule Generation
 
+![TAGMol Framework](https://arxiv.org/html/2406.01650v1/x1.png)
+
 [[Paper]](https://arxiv.org/abs/2406.01650)
 
 

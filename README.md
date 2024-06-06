@@ -1,5 +1,6 @@
 # TAGMol : Target-Aware Gradient-guided  Molecule Generation
 
+[[Paper]](https://arxiv.org/abs/2406.01650)
 
 
 ## Installation
@@ -131,4 +132,19 @@ _NOTE: It will take some time to prepare pqdqt and pqr files when you run the ev
 
 ---
 
-Note: This codebase was build on top of [TargetDiff](https://github.com/guanjq/targetdiff)
+## Citation
+
+```
+@article{dorna2024tagmol,
+  title={TAGMol: Target-Aware Gradient-guided Molecule Generation},
+  author={Vineeth Dorna and D. Subhalingam and Keshav Kolluru and Shreshth Tuli and Mrityunjay Singh and Saurabh Singal and N. M. Anoop Krishnan and Sayan Ranu},
+  journal={arXiv preprint arXiv:2406.01650},
+  year={2024}
+}
+```
+
+---
+
+## Acknowledgements
+
+This codebase was build on top of [TargetDiff](https://github.com/guanjq/targetdiff)

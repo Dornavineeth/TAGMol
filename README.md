@@ -133,6 +133,171 @@ The docking mode can be chosen from {qvina, vina_score, vina_dock, none}
 _NOTE: It will take some time to prepare pqdqt and pqr files when you run the evaluation code with vina_score/vina_dock docking mode for the first time._
 
 ---
+## Results
+
+<table>
+<tbody><tr>
+<td rowspan="2">Methods</td>
+<td colspan="2">Vina Score (↓)</td>
+<td colspan="2">Vina Min (↓)</td>
+<td colspan="2">Vina Dock (↓)</td>
+<td colspan="2">High Affinity (↑)</td>
+<td colspan="2">QED (↑)</td>
+<td colspan="2">SA (↑)</td>
+<td colspan="2">Diversity (↑)</td>
+<td rowspan="2">Hit Rate % (↑)</td>
+</tr>
+<tr>
+<!-- <td></td> -->
+<td>Avg.</td>
+<td>Med.</td>
+<td>Avg.</td>
+<td>Med.</td>
+<td>Avg.</td>
+<td>Med.</td>
+<td>Avg.</td>
+<td>Med.</td>
+<td>Avg.</td>
+<td>Med.</td>
+<td>Avg.</td>
+<td>Med.</td>
+<td>Avg.</td>
+<td>Med.</td>
+<!-- <td></td> -->
+</tr>
+<tr>
+<td>Reference</td>
+<td>-6.36</td>
+<td>-6.46</td>
+<td>-6.71</td>
+<td>-6.49</td>
+<td>-7.45</td>
+<td>-7.26</td>
+<td>-</td>
+<td>-</td>
+<td>0.48</td>
+<td>0.47</td>
+<td>0.73</td>
+<td>0.74</td>
+<td>-</td>
+<td>-</td>
+<td>21</td>
+</tr>
+<tr>
+<td>liGAN</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-6.33</td>
+<td>-6.20</td>
+<td>21.1%</td>
+<td>11.1%</td>
+<td>0.39</td>
+<td>0.39</td>
+<td>0.59</td>
+<td>0.57</td>
+<td>0.66</td>
+<td>0.67</td>
+<td>13.2</td>
+</tr>
+<tr>
+<td>AR</td>
+<td>-5.75</td>
+<td>-5.64</td>
+<td>-6.18</td>
+<td>-5.88</td>
+<td>-6.75</td>
+<td>-6.62</td>
+<td>37.9%</td>
+<td>31.0%</td>
+<td>0.51</td>
+<td>0.50</td>
+<td>0.63</td>
+<td>0.63</td>
+<td>0.70</td>
+<td>0.70</td>
+<td>12.9</td>
+</tr>
+<tr>
+<td>Pocket2Mol</td>
+<td>-5.14</td>
+<td>-4.70</td>
+<td>-6.42</td>
+<td>-5.82</td>
+<td>-7.15</td>
+<td>-6.79</td>
+<td>48.4%</td>
+<td>51.0%</td>
+<td>0.56</td>
+<td>0.57</td>
+<td>0.74</td>
+<td>0.75</td>
+<td>0.69</td>
+<td>0.71</td>
+<td>24.3</td>
+</tr>
+<tr>
+<td>TargetDiff</td>
+<td>-5.47</td>
+<td>-6.30</td>
+<td>-6.64</td>
+<td>-6.83</td>
+<td>-7.80</td>
+<td>-7.91</td>
+<td>58.1%</td>
+<td>59.1%</td>
+<td>0.48</td>
+<td>0.48</td>
+<td>0.58</td>
+<td>0.58</td>
+<td>0.72</td>
+<td>0.71</td>
+<td>20.5</td>
+</tr>
+<tr>
+<td>DecompDiff</td>
+<td>-4.85</td>
+<td>-6.03</td>
+<td>-6.76</td>
+<td>-7.09</td>
+<td>-8.48</td>
+<td>-8.50</td>
+<td>
+64.8%</td>
+<td>
+78.6%</td>
+<td>0.44</td>
+<td>0.41</td>
+<td>0.59</td>
+<td>0.59</td>
+<td>0.63</td>
+<td>0.62</td>
+<td>24.9</td>
+</tr>
+<tr>
+<td>TAGMol</td>
+<td>-7.02</td>
+<td>-7.77</td>
+<td>-7.95</td>
+<td>-8.07</td>
+<td>-8.59</td>
+<td>-8.69</td>
+<td>
+69.8%</td>
+<td>
+76.4%</td>
+<td>0.55</td>
+<td>0.56</td>
+<td>0.56</td>
+<td>0.56</td>
+<td>0.69</td>
+<td>0.70</td>
+<td>27.7</td>
+</tr>
+</tbody></table>
+
+---
 
 ## Citation
 

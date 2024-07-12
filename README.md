@@ -298,6 +298,8 @@ _NOTE: It will take some time to prepare pqdqt and pqr files when you run the ev
 </tr>
 </tbody></table>
 
+Due to space constraints, we only share the `eval_results` folder generated from the evaluation script. It can be found in the [same link](https://drive.google.com/drive/folders/1INaXCjVZCOQ_awNeGl5Xpsde_8JfnJiy?usp=drive_link) as other resources, inside `results` directory.
+
 ---
 
 ## Citation

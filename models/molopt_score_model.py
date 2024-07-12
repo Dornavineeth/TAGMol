@@ -977,7 +977,7 @@ class ScorePosNet3D(nn.Module):
                     ligand_pos_grad = guide_weight * gradient_scale_cord * curr_ligand_pos_grad
                 else:
                     ligand_pos_grad += (guide_weight * gradient_scale_cord * curr_ligand_pos_grad)
-                if curr_ligand_v_grad is not None:
+                if gradient_scale_categ != 0:
                     if ligand_v_grad is None:
                         ligand_v_grad = guide_weight * gradient_scale_categ * curr_ligand_v_grad
                     else:

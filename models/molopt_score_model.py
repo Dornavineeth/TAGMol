@@ -987,6 +987,8 @@ class ScorePosNet3D(nn.Module):
             ligand_pos_grad_update = ligand_pos_grad * ((0.5 * pos_log_variance).exp())
             pos_model_mean = pos_model_mean - ligand_pos_grad_update
 
+            assert ligand_v_grad is None, "Non-zero value for `gradient_scale_categ` is experimental and not part of the paper."
+            
             ## end of classifier guidance
                 
             # no noise when t == 0

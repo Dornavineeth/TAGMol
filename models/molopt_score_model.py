@@ -852,7 +852,7 @@ class ScorePosNet3D(nn.Module):
                 
                 ## Classifer update
                 ## update the categories based on gradient guidance
-                if ligand_v_grad is not None:
+                if gradient_scale_categ != 0:
                     ## heuristic-driven. no significant mathematical justification 
                     # prob [0.8, 0.2]
                     # guidance [-0.9, -0.7]

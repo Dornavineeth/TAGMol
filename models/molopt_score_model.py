@@ -852,7 +852,7 @@ class ScorePosNet3D(nn.Module):
                 
                 ## Classifer update
                 ## update the categories based on gradient guidance
-                if ligand_v_grad is not None:
+                if gradient_scale_categ != 0:
                     ## heuristic-driven. no significant mathematical justification 
                     # prob [0.8, 0.2]
                     # guidance [-0.9, -0.7]
@@ -977,7 +977,7 @@ class ScorePosNet3D(nn.Module):
                     ligand_pos_grad = guide_weight * gradient_scale_cord * curr_ligand_pos_grad
                 else:
                     ligand_pos_grad += (guide_weight * gradient_scale_cord * curr_ligand_pos_grad)
-                if curr_ligand_v_grad is not None:
+                if gradient_scale_categ != 0:
                     if ligand_v_grad is None:
                         ligand_v_grad = guide_weight * gradient_scale_categ * curr_ligand_v_grad
                     else:
@@ -987,6 +987,8 @@ class ScorePosNet3D(nn.Module):
             ligand_pos_grad_update = ligand_pos_grad * ((0.5 * pos_log_variance).exp())
             pos_model_mean = pos_model_mean - ligand_pos_grad_update
 
+            assert ligand_v_grad is None, "Non-zero value for `gradient_scale_categ` is experimental and not part of the paper."
+            
             ## end of classifier guidance
                 
             # no noise when t == 0

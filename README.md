@@ -2,6 +2,8 @@
 
 [[Paper]](https://arxiv.org/abs/2406.01650)
 
+Please refer [code](https://github.com/MoleculeAI/TAGMol) for the official implementation.
+
 ![TAGMol Framework](https://arxiv.org/html/2406.01650v1/x1.png)
 
 ---

@@ -1,6 +1,6 @@
 # TAGMol: Target-Aware Gradient-guided Molecule Generation
 
-[[Paper]](https://arxiv.org/abs/2406.01650)
+[[ICML 2024 Workshop]](https://arxiv.org/abs/2406.01650)
 
 Please refer [code](https://github.com/MoleculeAI/TAGMol) for the official implementation.
 
